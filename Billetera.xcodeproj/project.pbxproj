@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BD455F21C6001160048094C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD455F11C6001160048094C /* main.m */; };
+		2BD455F51C6001160048094C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD455F41C6001160048094C /* AppDelegate.m */; };
+		2BD455F81C6001160048094C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD455F71C6001160048094C /* ViewController.m */; };
+		2BD455FB1C6001160048094C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD455F91C6001160048094C /* Main.storyboard */; };
+		2BD455FD1C6001160048094C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD455FC1C6001160048094C /* Assets.xcassets */; };
+		2BD456001C6001160048094C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD455FE1C6001160048094C /* LaunchScreen.storyboard */; };
+		2BD456161C6001E70048094C /* EuroTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD456151C6001E70048094C /* EuroTest.m */; };
+		2BD4561A1C6002A00048094C /* AGTEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD456191C6002A00048094C /* AGTEuro.m */; };
+		2BD4561B1C6002A00048094C /* AGTEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD456191C6002A00048094C /* AGTEuro.m */; };
+		2BD4561D1C6218FF0048094C /* AGTDollarTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4561C1C6218FF0048094C /* AGTDollarTest.m */; };
+		2BD456201C6219E60048094C /* AGTDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4561F1C6219E60048094C /* AGTDollar.m */; };
+		2BD456211C6219ED0048094C /* AGTDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4561F1C6219E60048094C /* AGTDollar.m */; };
+		2BD456251C6268240048094C /* AGTMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD456241C6268240048094C /* AGTMoney.m */; };
+		2BD4562F1C626B350048094C /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4562E1C626B350048094C /* NSObject+GNUStepAddons.m */; };
+		2BD456311C626E080048094C /* AGTMoneyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD456301C626E080048094C /* AGTMoneyTest.m */; };
+		2BD456341C63B9CD0048094C /* AGTBrokenTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD456331C63B9CD0048094C /* AGTBrokenTest.m */; };
+		2BD456371C63BC8F0048094C /* AGTBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD456361C63BC8F0048094C /* AGTBroker.m */; };
+		2BD456381C63BC8F0048094C /* AGTBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD456361C63BC8F0048094C /* AGTBroker.m */; };
+		2BD4563A1C63D7C50048094C /* AGTWalletTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD456391C63D7C50048094C /* AGTWalletTest.m */; };
+		2BD4563D1C65E37B0048094C /* AGTWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4563C1C65E37B0048094C /* AGTWallet.m */; };
+		2BD4563E1C65E37B0048094C /* AGTWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4563C1C65E37B0048094C /* AGTWallet.m */; };
+		2BD456431C66027E0048094C /* AGTSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD456411C66027E0048094C /* AGTSimpleViewController.m */; };
+		2BD456441C66027E0048094C /* AGTSimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD456421C66027E0048094C /* AGTSimpleViewController.xib */; };
+		2BD456481C6603A40048094C /* AGTControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD456471C6603A40048094C /* AGTControllerTest.m */; };
+		2BD4564B1C6608D80048094C /* AGTWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4564A1C6608D80048094C /* AGTWalletTableViewController.m */; };
+		2BD4564E1C6671200048094C /* AGTNSNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4564D1C6671200048094C /* AGTNSNotificationCenter.m */; };
+		2BD456511C6674920048094C /* AGTFakeNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD456501C6674920048094C /* AGTFakeNotificationCenter.m */; };
+		2BD456531C66A1FF0048094C /* AGTNetworkTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD456521C66A1FF0048094C /* AGTNetworkTest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BD456071C6001160048094C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD455E51C6001160048094C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BD455EC1C6001160048094C;
+			remoteInfo = Billetera;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BD455ED1C6001160048094C /* Billetera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Billetera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BD455F11C6001160048094C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BD455F31C6001160048094C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2BD455F41C6001160048094C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2BD455F61C6001160048094C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2BD455F71C6001160048094C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2BD455FA1C6001160048094C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BD455FC1C6001160048094C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BD455FF1C6001160048094C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BD456011C6001160048094C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BD456061C6001160048094C /* BilleteraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BilleteraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BD4560C1C6001170048094C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BD456151C6001E70048094C /* EuroTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EuroTest.m; sourceTree = "<group>"; };
+		2BD456181C6002A00048094C /* AGTEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTEuro.h; sourceTree = "<group>"; };
+		2BD456191C6002A00048094C /* AGTEuro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTEuro.m; sourceTree = "<group>"; };
+		2BD4561C1C6218FF0048094C /* AGTDollarTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTDollarTest.m; sourceTree = "<group>"; };
+		2BD4561E1C6219E60048094C /* AGTDollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTDollar.h; sourceTree = "<group>"; };
+		2BD4561F1C6219E60048094C /* AGTDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTDollar.m; sourceTree = "<group>"; };
+		2BD456231C6268240048094C /* AGTMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTMoney.h; sourceTree = "<group>"; };
+		2BD456241C6268240048094C /* AGTMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMoney.m; sourceTree = "<group>"; };
+		2BD4562D1C626B350048094C /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
+		2BD4562E1C626B350048094C /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
+		2BD456301C626E080048094C /* AGTMoneyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMoneyTest.m; sourceTree = "<group>"; };
+		2BD456321C6294AA0048094C /* AGTMoney-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AGTMoney-Private.h"; sourceTree = "<group>"; };
+		2BD456331C63B9CD0048094C /* AGTBrokenTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTBrokenTest.m; sourceTree = "<group>"; };
+		2BD456351C63BC8F0048094C /* AGTBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTBroker.h; sourceTree = "<group>"; };
+		2BD456361C63BC8F0048094C /* AGTBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTBroker.m; sourceTree = "<group>"; };
+		2BD456391C63D7C50048094C /* AGTWalletTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTWalletTest.m; sourceTree = "<group>"; };
+		2BD4563B1C65E37B0048094C /* AGTWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTWallet.h; sourceTree = "<group>"; };
+		2BD4563C1C65E37B0048094C /* AGTWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTWallet.m; sourceTree = "<group>"; };
+		2BD456401C66027E0048094C /* AGTSimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTSimpleViewController.h; sourceTree = "<group>"; };
+		2BD456411C66027E0048094C /* AGTSimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTSimpleViewController.m; sourceTree = "<group>"; };
+		2BD456421C66027E0048094C /* AGTSimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTSimpleViewController.xib; sourceTree = "<group>"; };
+		2BD456471C6603A40048094C /* AGTControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTControllerTest.m; sourceTree = "<group>"; };
+		2BD456491C6608D80048094C /* AGTWalletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTWalletTableViewController.h; sourceTree = "<group>"; };
+		2BD4564A1C6608D80048094C /* AGTWalletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTWalletTableViewController.m; sourceTree = "<group>"; };
+		2BD4564D1C6671200048094C /* AGTNSNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNSNotificationCenter.m; sourceTree = "<group>"; };
+		2BD4564F1C6674920048094C /* AGTFakeNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTFakeNotificationCenter.h; sourceTree = "<group>"; };
+		2BD456501C6674920048094C /* AGTFakeNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTFakeNotificationCenter.m; sourceTree = "<group>"; };
+		2BD456521C66A1FF0048094C /* AGTNetworkTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNetworkTest.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BD455EA1C6001160048094C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BD456031C6001160048094C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BD455E41C6001160048094C = {
+			isa = PBXGroup;
+			children = (
+				2BD455EF1C6001160048094C /* Billetera */,
+				2BD456091C6001160048094C /* BilleteraTests */,
+				2BD455EE1C6001160048094C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BD455EE1C6001160048094C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BD455ED1C6001160048094C /* Billetera.app */,
+				2BD456061C6001160048094C /* BilleteraTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BD455EF1C6001160048094C /* Billetera */ = {
+			isa = PBXGroup;
+			children = (
+				2BD455F31C6001160048094C /* AppDelegate.h */,
+				2BD455F41C6001160048094C /* AppDelegate.m */,
+				2BD455F61C6001160048094C /* ViewController.h */,
+				2BD455F71C6001160048094C /* ViewController.m */,
+				2BD456171C6002720048094C /* Model */,
+				2BD4563F1C6602330048094C /* Controllers */,
+				2BD456261C626A480048094C /* Categorias */,
+				2BD455F91C6001160048094C /* Main.storyboard */,
+				2BD455FC1C6001160048094C /* Assets.xcassets */,
+				2BD455FE1C6001160048094C /* LaunchScreen.storyboard */,
+				2BD456011C6001160048094C /* Info.plist */,
+				2BD455F01C6001160048094C /* Supporting Files */,
+			);
+			path = Billetera;
+			sourceTree = "<group>";
+		};
+		2BD455F01C6001160048094C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BD455F11C6001160048094C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2BD456091C6001160048094C /* BilleteraTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BD4564C1C6670F30048094C /* Singletons */,
+				2BD456461C6602E60048094C /* Controllers */,
+				2BD456451C6602DF0048094C /* Model */,
+				2BD4560C1C6001170048094C /* Info.plist */,
+				2BD456541C66A2030048094C /* Network */,
+			);
+			path = BilleteraTests;
+			sourceTree = "<group>";
+		};
+		2BD456171C6002720048094C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BD456181C6002A00048094C /* AGTEuro.h */,
+				2BD456191C6002A00048094C /* AGTEuro.m */,
+				2BD4561E1C6219E60048094C /* AGTDollar.h */,
+				2BD4561F1C6219E60048094C /* AGTDollar.m */,
+				2BD456231C6268240048094C /* AGTMoney.h */,
+				2BD456241C6268240048094C /* AGTMoney.m */,
+				2BD456321C6294AA0048094C /* AGTMoney-Private.h */,
+				2BD456351C63BC8F0048094C /* AGTBroker.h */,
+				2BD456361C63BC8F0048094C /* AGTBroker.m */,
+				2BD4563B1C65E37B0048094C /* AGTWallet.h */,
+				2BD4563C1C65E37B0048094C /* AGTWallet.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2BD456261C626A480048094C /* Categorias */ = {
+			isa = PBXGroup;
+			children = (
+				2BD4562D1C626B350048094C /* NSObject+GNUStepAddons.h */,
+				2BD4562E1C626B350048094C /* NSObject+GNUStepAddons.m */,
+			);
+			name = Categorias;
+			sourceTree = "<group>";
+		};
+		2BD4563F1C6602330048094C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BD456401C66027E0048094C /* AGTSimpleViewController.h */,
+				2BD456411C66027E0048094C /* AGTSimpleViewController.m */,
+				2BD456421C66027E0048094C /* AGTSimpleViewController.xib */,
+				2BD456491C6608D80048094C /* AGTWalletTableViewController.h */,
+				2BD4564A1C6608D80048094C /* AGTWalletTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2BD456451C6602DF0048094C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BD456151C6001E70048094C /* EuroTest.m */,
+				2BD4561C1C6218FF0048094C /* AGTDollarTest.m */,
+				2BD456301C626E080048094C /* AGTMoneyTest.m */,
+				2BD456331C63B9CD0048094C /* AGTBrokenTest.m */,
+				2BD456391C63D7C50048094C /* AGTWalletTest.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2BD456461C6602E60048094C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BD456471C6603A40048094C /* AGTControllerTest.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2BD4564C1C6670F30048094C /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				2BD4564D1C6671200048094C /* AGTNSNotificationCenter.m */,
+				2BD4564F1C6674920048094C /* AGTFakeNotificationCenter.h */,
+				2BD456501C6674920048094C /* AGTFakeNotificationCenter.m */,
+			);
+			name = Singletons;
+			sourceTree = "<group>";
+		};
+		2BD456541C66A2030048094C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2BD456521C66A1FF0048094C /* AGTNetworkTest.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BD455EC1C6001160048094C /* Billetera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BD4560F1C6001170048094C /* Build configuration list for PBXNativeTarget "Billetera" */;
+			buildPhases = (
+				2BD455E91C6001160048094C /* Sources */,
+				2BD455EA1C6001160048094C /* Frameworks */,
+				2BD455EB1C6001160048094C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Billetera;
+			productName = Billetera;
+			productReference = 2BD455ED1C6001160048094C /* Billetera.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BD456051C6001160048094C /* BilleteraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BD456121C6001170048094C /* Build configuration list for PBXNativeTarget "BilleteraTests" */;
+			buildPhases = (
+				2BD456021C6001160048094C /* Sources */,
+				2BD456031C6001160048094C /* Frameworks */,
+				2BD456041C6001160048094C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BD456081C6001160048094C /* PBXTargetDependency */,
+			);
+			name = BilleteraTests;
+			productName = BilleteraTests;
+			productReference = 2BD456061C6001160048094C /* BilleteraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BD455E51C6001160048094C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Nicatec Software";
+				TargetAttributes = {
+					2BD455EC1C6001160048094C = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					2BD456051C6001160048094C = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2BD455EC1C6001160048094C;
+					};
+				};
+			};
+			buildConfigurationList = 2BD455E81C6001160048094C /* Build configuration list for PBXProject "Billetera" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BD455E41C6001160048094C;
+			productRefGroup = 2BD455EE1C6001160048094C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BD455EC1C6001160048094C /* Billetera */,
+				2BD456051C6001160048094C /* BilleteraTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BD455EB1C6001160048094C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD456001C6001160048094C /* LaunchScreen.storyboard in Resources */,
+				2BD456441C66027E0048094C /* AGTSimpleViewController.xib in Resources */,
+				2BD455FD1C6001160048094C /* Assets.xcassets in Resources */,
+				2BD455FB1C6001160048094C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BD456041C6001160048094C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BD455E91C6001160048094C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD4564B1C6608D80048094C /* AGTWalletTableViewController.m in Sources */,
+				2BD456201C6219E60048094C /* AGTDollar.m in Sources */,
+				2BD455F81C6001160048094C /* ViewController.m in Sources */,
+				2BD4562F1C626B350048094C /* NSObject+GNUStepAddons.m in Sources */,
+				2BD4563D1C65E37B0048094C /* AGTWallet.m in Sources */,
+				2BD455F51C6001160048094C /* AppDelegate.m in Sources */,
+				2BD456251C6268240048094C /* AGTMoney.m in Sources */,
+				2BD455F21C6001160048094C /* main.m in Sources */,
+				2BD4561A1C6002A00048094C /* AGTEuro.m in Sources */,
+				2BD456371C63BC8F0048094C /* AGTBroker.m in Sources */,
+				2BD456431C66027E0048094C /* AGTSimpleViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BD456021C6001160048094C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BD456481C6603A40048094C /* AGTControllerTest.m in Sources */,
+				2BD456381C63BC8F0048094C /* AGTBroker.m in Sources */,
+				2BD456211C6219ED0048094C /* AGTDollar.m in Sources */,
+				2BD456341C63B9CD0048094C /* AGTBrokenTest.m in Sources */,
+				2BD456531C66A1FF0048094C /* AGTNetworkTest.m in Sources */,
+				2BD4563E1C65E37B0048094C /* AGTWallet.m in Sources */,
+				2BD456311C626E080048094C /* AGTMoneyTest.m in Sources */,
+				2BD4561D1C6218FF0048094C /* AGTDollarTest.m in Sources */,
+				2BD456161C6001E70048094C /* EuroTest.m in Sources */,
+				2BD4561B1C6002A00048094C /* AGTEuro.m in Sources */,
+				2BD456511C6674920048094C /* AGTFakeNotificationCenter.m in Sources */,
+				2BD4564E1C6671200048094C /* AGTNSNotificationCenter.m in Sources */,
+				2BD4563A1C63D7C50048094C /* AGTWalletTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BD456081C6001160048094C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BD455EC1C6001160048094C /* Billetera */;
+			targetProxy = 2BD456071C6001160048094C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BD455F91C6001160048094C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BD455FA1C6001160048094C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BD455FE1C6001160048094C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BD455FF1C6001160048094C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BD4560D1C6001170048094C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BD4560E1C6001170048094C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BD456101C6001170048094C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Billetera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nicatec.Billetera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2BD456111C6001170048094C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Billetera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nicatec.Billetera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2BD456131C6001170048094C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BilleteraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nicatec.BilleteraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Billetera.app/Billetera";
+			};
+			name = Debug;
+		};
+		2BD456141C6001170048094C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BilleteraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nicatec.BilleteraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Billetera.app/Billetera";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BD455E81C6001160048094C /* Build configuration list for PBXProject "Billetera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BD4560D1C6001170048094C /* Debug */,
+				2BD4560E1C6001170048094C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BD4560F1C6001170048094C /* Build configuration list for PBXNativeTarget "Billetera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BD456101C6001170048094C /* Debug */,
+				2BD456111C6001170048094C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BD456121C6001170048094C /* Build configuration list for PBXNativeTarget "BilleteraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BD456131C6001170048094C /* Debug */,
+				2BD456141C6001170048094C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BD455E51C6001160048094C /* Project object */;
+}
