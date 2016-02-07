@@ -50,15 +50,21 @@
     return [self.model count] + 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    static NSString *cellID = @"Celda";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        
+    }
+
+    cell.textLabel.text = @"gsds";
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
