@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "AGTWalletTableViewController.h"
 #import "AGTWallet.h"
+#import "AGTMoney.h"
 
 @interface AppDelegate ()
 
@@ -25,7 +26,13 @@
     
     
     AGTWallet *wallet = [[AGTWallet alloc]initWithAmount:1 currency:@"EUR"];
+    [wallet plus:[AGTMoney euroWithAmount:40]];
+    [wallet plus:[AGTMoney dollarWithAmount:95]];
+    AGTMoney *yen = [[AGTMoney alloc] initWithAmount:400 currency:@"YEN"];
+    [wallet plus:yen];
+
     
+
     AGTWalletTableViewController *tabla = [[AGTWalletTableViewController alloc] initWithModel:wallet];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:tabla];
     

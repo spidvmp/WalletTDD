@@ -60,7 +60,8 @@
         
     }
 
-    cell.textLabel.text = @"gsds";
+    AGTMoney *moneda = [self.model objectAtIndexPath:indexPath];
+    cell.textLabel.text = [NSString stringWithFormat:@"%d %@",[moneda.amount integerValue], moneda.currency];
     
     return cell;
 }

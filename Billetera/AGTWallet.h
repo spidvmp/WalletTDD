@@ -16,4 +16,5 @@
 
 
 -(void) subscribeToMemoryWarning:(NSNotificationCenter *)nc;
+-(AGTMoney*) objectAtIndexPath:(NSIndexPath *)ip;
 @end

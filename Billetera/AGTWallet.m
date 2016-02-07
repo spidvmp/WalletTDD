@@ -53,6 +53,10 @@
     return result;
 }
 
+-(AGTMoney*) objectAtIndexPath:(NSIndexPath *)ip {
+    //teniendo el indexpath, devuelvo el billete que hay en esa posicion
+    return [self.moneys objectAtIndex:ip.row];
+}
 
 //esto es para la prueba del singleton
 -(void)subscribeToMemoryWarning:(NSNotificationCenter *)nc {
