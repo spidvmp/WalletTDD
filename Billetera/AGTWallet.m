@@ -64,7 +64,14 @@
 -(NSArray* )currencies {
     //no es la forma mas efectiva, pero no es lo que estamospracticando
     //recorre todo el wallet y se queda con las monedas distintas que hay, despues las ordena alfabetocamente y devuelve el array, asi que con esto tb sacamos lo nombres de las secciones
-    return @[@"a",@"b"];
+    //creo un NSSet para poner todas las distintas monedas que hay, pueden haber monedas repetidas, asi me las quito de un plumazo
+    NSMutableSet *monedas =[[NSMutableSet alloc]init];
+    for (AGTMoney *each in self.moneys) {
+        [monedas addObject:each.currency];
+    }
+    //ahor genero el array ordenado por el currency
+    NSArray *res = [[monedas allObjects] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)] ;
+    return res;
 }
 
 //esto es para la prueba del singleton

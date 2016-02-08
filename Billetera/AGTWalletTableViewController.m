@@ -67,6 +67,16 @@
     return cell;
 }
 
+-(NSString*) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section  {
+    //saco el listado ordenado de las currencies
+    //compruebo si me estan pidiendo la ultima seccion
+    NSArray *monedas = [self.model currencies];
+    if ( section >= [monedas count])
+        return @"Total";
+    else {
+        return [monedas objectAtIndex:section];
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.

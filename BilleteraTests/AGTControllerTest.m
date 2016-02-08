@@ -78,15 +78,24 @@
 
 -(void)testSameSectionsThanCurrencies{
     
-    NSInteger sections = [self.walletVC numberOfSectionsInTableView:nil] + 1;
+    NSInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
     
     
-    XCTAssertEqual(sections, 4, "Las secciones de la tabla deben ser 3");
+    XCTAssertEqual(sections, 4, "Las secciones de la tabla deben ser 4");
 }
 
--(void)testNumberOfSections{
+-(void)testNumberOfCurrencies{
     NSInteger sections = [[self.wallet currencies] count];
-    XCTAssertEqual(sections, 2, "Deben haber 2 secciones");
+    XCTAssertEqual(sections, 3, "Deben haber 3 secciones");
+}
+
+-(void)testTitleForCurrency{
+    
+    AGTMoney *primera  = [[self.wallet currencies] objectAtIndex:0];
+    AGTMoney *segunda  = [[self.wallet currencies] objectAtIndex:1];
+    
+    XCTAssertEqualObjects(primera, @"EUR",@"euro deberia ir primero");
+    XCTAssertEqualObjects(segunda, @"JPY", @"JPY deberia ir segunda");
 }
 
 
