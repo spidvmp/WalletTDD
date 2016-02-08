@@ -61,6 +61,12 @@
     return [self.moneys objectAtIndex:ip.row];
 }
 
+-(NSArray* )currencies {
+    //no es la forma mas efectiva, pero no es lo que estamospracticando
+    //recorre todo el wallet y se queda con las monedas distintas que hay, despues las ordena alfabetocamente y devuelve el array, asi que con esto tb sacamos lo nombres de las secciones
+    return @[@"a",@"b"];
+}
+
 //esto es para la prueba del singleton
 -(void)subscribeToMemoryWarning:(NSNotificationCenter *)nc {
     [nc addObserver:self

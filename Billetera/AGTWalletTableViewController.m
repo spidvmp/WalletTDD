@@ -41,8 +41,9 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    //he de saber cuantas monedas diferentes hay y devolver las que hay mas 1
 
-    return 1;
+    return [[self.model currencies] count] + 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

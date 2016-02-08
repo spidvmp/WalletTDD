@@ -17,4 +17,5 @@
 
 -(void) subscribeToMemoryWarning:(NSNotificationCenter *)nc;
 -(AGTMoney*) objectAtIndexPath:(NSIndexPath *)ip;
+-(NSArray *) currencies;
 @end

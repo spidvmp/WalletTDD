@@ -56,7 +56,7 @@
     //somulamo el tocar el boton
     [self.simpleVC displayText:self.button];
     
-    XCTAssertEqualObjects(self.button.titleLabel.text, self.label.text,@"button yu label tienen que tener el mismo valor");
+    XCTAssertEqualObjects(self.button.titleLabel.text, self.label.text,@"button y label tienen que tener el mismo valor");
     
     
 }
@@ -78,10 +78,15 @@
 
 -(void)testSameSectionsThanCurrencies{
     
-    //NSInteger sections = [self.walletVC numberOfSectionsInTableView:nil] + 1;
-    NSInteger sections = [[self.wallet currencies] count];
+    NSInteger sections = [self.walletVC numberOfSectionsInTableView:nil] + 1;
     
-    XCTAssertEqual(sections, 3, "Las secciones deben ser 2");
+    
+    XCTAssertEqual(sections, 4, "Las secciones de la tabla deben ser 3");
+}
+
+-(void)testNumberOfSections{
+    NSInteger sections = [[self.wallet currencies] count];
+    XCTAssertEqual(sections, 2, "Deben haber 2 secciones");
 }
 
 
