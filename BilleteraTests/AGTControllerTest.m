@@ -36,6 +36,7 @@
     
     self.wallet = [[AGTWallet alloc]initWithAmount:1 currency:@"USD"];
     [self.wallet plus:[AGTMoney euroWithAmount:1]];
+    [self.wallet plus:[AGTMoney euroWithAmount:4]];
     [self.wallet plus:[[AGTMoney alloc] initWithAmount:54 currency:@"JPY"]];
     self.walletVC = [[AGTWalletTableViewController alloc]initWithModel:self.wallet];
 }
@@ -96,6 +97,18 @@
     
     XCTAssertEqualObjects(primera, @"EUR",@"euro deberia ir primero");
     XCTAssertEqualObjects(segunda, @"JPY", @"JPY deberia ir segunda");
+}
+
+-(void)testNumberOfBillsInCurrrency{
+    
+    NSArray *eur = [self.wallet billsFromCurrency:@"EUR"];
+    NSArray *dol = [self.wallet billsFromCurrency:@"USD"];
+    
+    XCTAssertEqual([eur count], 2, @"tienen que haber 2 billetes de euro");
+    XCTAssertEqual([dol count], 1, @"tiene que haber un billete de dolar");
+    
+    
+    
 }
 
 

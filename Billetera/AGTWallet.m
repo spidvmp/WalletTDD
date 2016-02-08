@@ -74,6 +74,15 @@
     return res;
 }
 
+-(NSArray *) billsFromCurrency:(NSString *)currency {
+    //filtro de moneys todos los billetes de una divisa y los devuelvo ordenados de mayor a menor
+    
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"self.currency == %@",currency];
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"amount" ascending:NO];
+    NSArray *res = [[self.moneys filteredArrayUsingPredicate:pred] sortedArrayUsingDescriptors: @[descriptor]] ;
+    return res;
+}
+
 //esto es para la prueba del singleton
 -(void)subscribeToMemoryWarning:(NSNotificationCenter *)nc {
     [nc addObserver:self
