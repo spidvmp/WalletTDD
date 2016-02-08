@@ -55,6 +55,9 @@
 
 -(AGTMoney*) objectAtIndexPath:(NSIndexPath *)ip {
     //teniendo el indexpath, devuelvo el billete que hay en esa posicion
+    if ( ip.row >= [self.moneys count])
+        return nil;
+    else
     return [self.moneys objectAtIndex:ip.row];
 }
 

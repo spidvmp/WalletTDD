@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BD439201C68D3AC004827C4 /* AGTDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4391D1C68D3AC004827C4 /* AGTDollar.m */; };
+		2BD439211C68D3AC004827C4 /* AGTEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4391F1C68D3AC004827C4 /* AGTEuro.m */; };
 		2BD455F21C6001160048094C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD455F11C6001160048094C /* main.m */; };
 		2BD455F51C6001160048094C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD455F41C6001160048094C /* AppDelegate.m */; };
 		2BD455F81C6001160048094C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD455F71C6001160048094C /* ViewController.m */; };
@@ -44,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BD4391C1C68D3AC004827C4 /* AGTDollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTDollar.h; sourceTree = "<group>"; };
+		2BD4391D1C68D3AC004827C4 /* AGTDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTDollar.m; sourceTree = "<group>"; };
+		2BD4391E1C68D3AC004827C4 /* AGTEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTEuro.h; sourceTree = "<group>"; };
+		2BD4391F1C68D3AC004827C4 /* AGTEuro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTEuro.m; sourceTree = "<group>"; };
 		2BD455ED1C6001160048094C /* Billetera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Billetera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD455F11C6001160048094C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2BD455F31C6001160048094C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,6 +165,10 @@
 		2BD456171C6002720048094C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2BD4391C1C68D3AC004827C4 /* AGTDollar.h */,
+				2BD4391D1C68D3AC004827C4 /* AGTDollar.m */,
+				2BD4391E1C68D3AC004827C4 /* AGTEuro.h */,
+				2BD4391F1C68D3AC004827C4 /* AGTEuro.m */,
 				2BD456231C6268240048094C /* AGTMoney.h */,
 				2BD456241C6268240048094C /* AGTMoney.m */,
 				2BD456351C63BC8F0048094C /* AGTBroker.h */,
@@ -329,8 +339,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BD439201C68D3AC004827C4 /* AGTDollar.m in Sources */,
 				2BD4564B1C6608D80048094C /* AGTWalletTableViewController.m in Sources */,
 				2BD455F81C6001160048094C /* ViewController.m in Sources */,
+				2BD439211C68D3AC004827C4 /* AGTEuro.m in Sources */,
 				2BD4562F1C626B350048094C /* NSObject+GNUStepAddons.m in Sources */,
 				2BD4563D1C65E37B0048094C /* AGTWallet.m in Sources */,
 				2BD455F51C6001160048094C /* AppDelegate.m in Sources */,
