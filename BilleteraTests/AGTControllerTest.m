@@ -10,6 +10,7 @@
 #import "AGTSimpleViewController.h"
 #import "AGTWalletTableViewController.h"
 #import "AGTWallet.h"
+#import "AGTMoney.h"
 
 @interface AGTControllerTest : XCTestCase
 @property (strong,nonatomic) AGTSimpleViewController *simpleVC;
@@ -35,6 +36,7 @@
     
     self.wallet = [[AGTWallet alloc]initWithAmount:1 currency:@"USD"];
     [self.wallet plus:[AGTMoney euroWithAmount:1]];
+    [self.wallet plus:[[AGTMoney alloc] initWithAmount:54 currency:@"JPY"]];
     self.walletVC = [[AGTWalletTableViewController alloc]initWithModel:self.wallet];
 }
 
@@ -59,19 +61,27 @@
     
 }
 
--(void)testThanTableHasOneSection{
-    
-    NSInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
-    
-    XCTAssertEqual(sections,1, @"sections debe de ser 1");
-    
-}
+//-(void)testThanTableHasOneSection{
+//    Este test ya no sirve, habra tantas secciones como divisas + 1
+//    
+//    NSInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
+//    
+//    XCTAssertEqual(sections,1, @"sections debe de ser 1");
+//
+//}
 
 -(void)testThatNumberOfCellIsnumberOfMoneysPlusOne{
     
     XCTAssertEqual(self.wallet.count + 1, [self.walletVC tableView:nil numberOfRowsInSection:0], @"numero de celdas es el numero de monedas +1");
+ 
+}
+
+-(void)testSameSectionsThanCurrencies{
     
+    //NSInteger sections = [self.walletVC numberOfSectionsInTableView:nil] + 1;
+    NSInteger sections = [[self.wallet currencies] count];
     
+    XCTAssertEqual(sections, 3, "Las secciones deben ser 2");
 }
 
 
