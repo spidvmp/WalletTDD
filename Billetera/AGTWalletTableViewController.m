@@ -48,7 +48,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return [self.model count] + 1;
+    //return [self.model count] + 1;
+    NSArray *monedas = [self.model currencies];
+    if ( section >= [monedas count])
+        return 1;
+    else {
+        return [[self.model billsFromCurrency:[monedas objectAtIndex:section] ] count];
+    }
 }
 
 
@@ -61,9 +67,17 @@
         
     }
 
-    AGTMoney *moneda = [self.model objectAtIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld %@",[moneda.amount integerValue], moneda.currency];
     
+    NSArray *monedas = [self.model currencies];
+    if ( indexPath.section >= [monedas count])
+        cell.textLabel.text = @"totalesssss";
+    else {
+        //return [[self.model billsFromCurrency:[monedas objectAtIndex:section] ] count];
+
+    
+    AGTMoney *moneda = [[self.model billsFromCurrency:[monedas objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld %@",[moneda.amount integerValue], moneda.currency];
+}
     return cell;
 }
 

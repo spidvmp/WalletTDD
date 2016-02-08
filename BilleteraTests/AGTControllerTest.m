@@ -71,11 +71,11 @@
 //
 //}
 
--(void)testThatNumberOfCellIsnumberOfMoneysPlusOne{
-    
-    XCTAssertEqual(self.wallet.count + 1, [self.walletVC tableView:nil numberOfRowsInSection:0], @"numero de celdas es el numero de monedas +1");
- 
-}
+//-(void)testThatNumberOfCellIsnumberOfMoneysPlusOne{
+//    
+//    XCTAssertEqual(self.wallet.count + 1, [self.walletVC tableView:nil numberOfRowsInSection:0], @"numero de celdas es el numero de monedas +1");
+// 
+//}
 
 -(void)testSameSectionsThanCurrencies{
     
