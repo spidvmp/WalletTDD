@@ -69,16 +69,24 @@
     }
     
     
-//    NSArray *monedas = [self.model currencies];
-//    if ( indexPath.section >= [monedas count])
-//        cell.textLabel.text = @"totalesssss";
-//    else {
-//        //return [[self.model billsFromCurrency:[monedas objectAtIndex:section] ] count];
-//        
-//        
-//        AGTMoney *moneda = [[self.model billsFromCurrency:[monedas objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
-//        cell.textLabel.text = [NSString stringWithFormat:@"%ld %@",[moneda.amount integerValue], moneda.currency];
-//    }
+    NSArray *monedas = [self.model currencies];
+    if ( indexPath.section >= [monedas count])
+        cell.textLabel.text = @"totalesssss";
+    else {
+        //compruebo si es la ultima row para poner el total de la divisa o no
+        //este if no lo he hecho nunca, petar no peta, pero se puede/debe hacer esto?
+        if ( [self tableView:tableView numberOfRowsInSection:indexPath.section] == (indexPath.row +1)) {
+            //hay que poner el total
+            cell.textLabel.text = @"subtotal";
+        } else {
+            
+            
+            AGTMoney *moneda = [[self.model billsFromCurrency:[monedas objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+            cell.textLabel.text = [NSString stringWithFormat:@"%ld %@",[moneda.amount integerValue], moneda.currency];
+            NSLog(@"%@", moneda);
+        }
+    }
+    
     return cell;
 }
 
