@@ -77,13 +77,15 @@
         //este if no lo he hecho nunca, petar no peta, pero se puede/debe hacer esto?
         if ( [self tableView:tableView numberOfRowsInSection:indexPath.section] == (indexPath.row +1)) {
             //hay que poner el total
-            cell.textLabel.text = @"subtotal";
+            cell.textLabel.text = [NSString stringWithFormat:@"Subtotal: %ld",[self.model sumCurrency:[monedas objectAtIndex:indexPath.section]]];
+
+            
         } else {
             
             
             AGTMoney *moneda = [[self.model billsFromCurrency:[monedas objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
             cell.textLabel.text = [NSString stringWithFormat:@"%ld %@",[moneda.amount integerValue], moneda.currency];
-            NSLog(@"%@", moneda);
+
         }
     }
     

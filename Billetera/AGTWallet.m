@@ -83,6 +83,17 @@
     return res;
 }
 
+-(NSInteger) sumCurrency:(NSString*) currency {
+    //saco los billetes que hay de una divisa
+    NSArray *hay = [self billsFromCurrency:currency];
+    //hecho en falta un .reduce
+    int sum = 0;
+    for (AGTMoney *each in hay) {
+        sum+=[each.amount intValue];
+    }
+    return sum;
+}
+
 //esto es para la prueba del singleton
 -(void)subscribeToMemoryWarning:(NSNotificationCenter *)nc {
     [nc addObserver:self

@@ -194,8 +194,8 @@
 				2BD456401C66027E0048094C /* AGTSimpleViewController.h */,
 				2BD456411C66027E0048094C /* AGTSimpleViewController.m */,
 				2BD456421C66027E0048094C /* AGTSimpleViewController.xib */,
-				2BD4564A1C6608D80048094C /* AGTWalletTableViewController.m */,
 				2BD456491C6608D80048094C /* AGTWalletTableViewController.h */,
+				2BD4564A1C6608D80048094C /* AGTWalletTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

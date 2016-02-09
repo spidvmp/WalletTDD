@@ -28,6 +28,10 @@
     AGTWallet *wallet = [[AGTWallet alloc]initWithAmount:1 currency:@"EUR"];
     [wallet plus:[AGTMoney euroWithAmount:40]];
     [wallet plus:[AGTMoney dollarWithAmount:95]];
+    [wallet plus:[AGTMoney dollarWithAmount:53]];
+    [wallet plus:[AGTMoney dollarWithAmount:85]];
+    [wallet plus:[AGTMoney dollarWithAmount:35]];
+    
     AGTMoney *yen = [[AGTMoney alloc] initWithAmount:400 currency:@"JPY"];
     [wallet plus:yen];
 

@@ -114,8 +114,12 @@
     
     XCTAssertEqual([eur count], 2, @"tienen que haber 2 billetes de euro");
     XCTAssertEqual([dol count], 1, @"tiene que haber un billete de dolar");
-    
-    
+}
+
+-(void)testSumAmount{
+    NSInteger sum = [self.wallet sumCurrency:@"EUR"];
+    XCTAssertEqual(sum, 5, @"deben sumar 5 los euros");
+
     
 }
 

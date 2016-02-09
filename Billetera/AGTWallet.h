@@ -19,4 +19,5 @@
 -(AGTMoney*) objectAtIndexPath:(NSIndexPath *)ip;
 -(NSArray *) currencies;
 -(NSArray *) billsFromCurrency:(NSString*)currency;
+-(NSInteger) sumCurrency:(NSString*) currency;
 @end
