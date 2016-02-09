@@ -53,7 +53,8 @@
     if ( section >= [monedas count])
         return 1;
     else {
-        return [[self.model billsFromCurrency:[monedas objectAtIndex:section] ] count];
+        //devuelvo una fiula mas de las que hay xq hay que poner el total de la divisa
+        return [[self.model billsFromCurrency:[monedas objectAtIndex:section] ] count] +1;
     }
 }
 
@@ -66,18 +67,18 @@
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
         
     }
-
     
-    NSArray *monedas = [self.model currencies];
-    if ( indexPath.section >= [monedas count])
-        cell.textLabel.text = @"totalesssss";
-    else {
-        //return [[self.model billsFromCurrency:[monedas objectAtIndex:section] ] count];
-
     
-    AGTMoney *moneda = [[self.model billsFromCurrency:[monedas objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld %@",[moneda.amount integerValue], moneda.currency];
-}
+//    NSArray *monedas = [self.model currencies];
+//    if ( indexPath.section >= [monedas count])
+//        cell.textLabel.text = @"totalesssss";
+//    else {
+//        //return [[self.model billsFromCurrency:[monedas objectAtIndex:section] ] count];
+//        
+//        
+//        AGTMoney *moneda = [[self.model billsFromCurrency:[monedas objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+//        cell.textLabel.text = [NSString stringWithFormat:@"%ld %@",[moneda.amount integerValue], moneda.currency];
+//    }
     return cell;
 }
 

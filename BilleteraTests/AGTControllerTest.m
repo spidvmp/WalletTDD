@@ -89,6 +89,14 @@
     NSInteger sections = [[self.wallet currencies] count];
     XCTAssertEqual(sections, 3, "Deben haber 3 secciones");
 }
+-(void)testNumberOfRowsForCurrency{
+    
+    NSInteger rowseuro = [self.walletVC tableView:nil numberOfRowsInSection:0];
+    XCTAssertEqual(rowseuro, 3,@"Deben haber 3 rows en Euro, 2 de monedas y una de total");
+    NSInteger rowsdollar = [self.walletVC tableView:nil numberOfRowsInSection:2];
+    XCTAssertEqual(rowsdollar, 2, @"Deben habr 2 rows en Dollar, 1 de moneda y otra de total");
+    
+}
 
 -(void)testTitleForCurrency{
     
