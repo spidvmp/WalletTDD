@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 @class AGTWallet;
 
-@interface AGTWalletTableViewController : UITableViewController
+@protocol AddMoneyProtocol <NSObject>
+
+-(void) dismissWithCurrency:(NSString *) currency amount:(NSInteger) amount andRate: (NSInteger) rate;
+
+@end
+
+@interface AGTWalletTableViewController : UITableViewController <AddMoneyProtocol>
 
 -(id)initWithModel:(AGTWallet *) model;
 

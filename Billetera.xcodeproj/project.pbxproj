@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B6ED8C51C6BB0AE00F738F8 /* AddMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6ED8C41C6BB0AE00F738F8 /* AddMoney.m */; };
 		2BD439201C68D3AC004827C4 /* AGTDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4391D1C68D3AC004827C4 /* AGTDollar.m */; };
 		2BD439211C68D3AC004827C4 /* AGTEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4391F1C68D3AC004827C4 /* AGTEuro.m */; };
 		2BD455F21C6001160048094C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD455F11C6001160048094C /* main.m */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B6ED8C31C6BB0AE00F738F8 /* AddMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMoney.h; sourceTree = "<group>"; };
+		2B6ED8C41C6BB0AE00F738F8 /* AddMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMoney.m; sourceTree = "<group>"; };
 		2BD4391C1C68D3AC004827C4 /* AGTDollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTDollar.h; sourceTree = "<group>"; };
 		2BD4391D1C68D3AC004827C4 /* AGTDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTDollar.m; sourceTree = "<group>"; };
 		2BD4391E1C68D3AC004827C4 /* AGTEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTEuro.h; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				2BD456421C66027E0048094C /* AGTSimpleViewController.xib */,
 				2BD456491C6608D80048094C /* AGTWalletTableViewController.h */,
 				2BD4564A1C6608D80048094C /* AGTWalletTableViewController.m */,
+				2B6ED8C31C6BB0AE00F738F8 /* AddMoney.h */,
+				2B6ED8C41C6BB0AE00F738F8 /* AddMoney.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -349,6 +354,7 @@
 				2BD456251C6268240048094C /* AGTMoney.m in Sources */,
 				2BD455F21C6001160048094C /* main.m in Sources */,
 				2BD456371C63BC8F0048094C /* AGTBroker.m in Sources */,
+				2B6ED8C51C6BB0AE00F738F8 /* AddMoney.m in Sources */,
 				2BD456431C66027E0048094C /* AGTSimpleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

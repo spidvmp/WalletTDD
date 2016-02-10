@@ -9,6 +9,7 @@
 #import "AGTWalletTableViewController.h"
 #import "AGTWallet.h"
 #import "AGTBroker.h"
+#import "AddMoney.h"
 
 @interface AGTWalletTableViewController ()
 
@@ -38,6 +39,10 @@
     //pongo las relaciones que puse en el appdelegate
     [self.broker addRate:2 fromCurrency:@"USD" toCurrency:@"EUR"];
     [self.broker addRate:3 fromCurrency:@"JPY" toCurrency:@"EUR"];
+    
+    
+    //boton de añadir
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addMoney:)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -110,6 +115,15 @@
     }
 }
 
+-(IBAction)addMoney:(id) sender{
+    AddMoney *am = [[AddMoney alloc] initWithNibName:nil bundle:nil];
+    am.delegate = self;
+
+    am.modalPresentationStyle = UIModalPresentationFormSheet;
+    [self.navigationController presentViewController:am animated:YES completion:nil];
+    
+}
+
 
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -141,6 +155,14 @@
     [tableView reloadData];
 }
 
+
+#pragma mark - Protocolo dismiss
+-(void)dismissWithCurrency:(NSString *)currency amount:(NSInteger)amount andRate:(NSInteger)rate {
+    
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    
+    
+}
 
 /*
 // Override to support rearranging the table view.
