@@ -46,7 +46,7 @@
     return total;
 }
 
--(id <AGTMoney>) reduceToCurrency:(NSString *)currency withBorker:(AGTBroker*) broker{
+-(id <AGTMoney>) reduceToCurrency:(NSString *)currency withBroker:(AGTBroker*) broker{
     AGTMoney *result;
     double rate = [[broker.rates objectForKey:[broker keyFromCurrency: self.currency toCurrency:currency]] doubleValue];
     //comproibamos que la divisa de origen y destino son las misma

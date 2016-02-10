@@ -15,7 +15,7 @@
 -(id) initWithAmount:(NSUInteger) amount currency:(NSString *) currency;
 -(id <AGTMoney>) times: (NSUInteger) multiplier;
 -(id <AGTMoney>) plus: (AGTMoney *) other;
--(id <AGTMoney>) reduceToCurrency:(NSString *)currency withBorker:(AGTBroker*) broker;
+-(id <AGTMoney>) reduceToCurrency:(NSString *)currency withBroker:(AGTBroker*) broker;
 
 @end
 

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @import UIKit;
+@class AGTBroker;
 #import "AGTMoney.h"
 
 
@@ -20,4 +21,5 @@
 -(NSArray *) currencies;
 -(NSArray *) billsFromCurrency:(NSString*)currency;
 -(NSInteger) sumCurrency:(NSString*) currency;
+-(NSInteger) sumWalletInCurrency:(NSString *) currency andBroker:(AGTBroker *) borker;
 @end

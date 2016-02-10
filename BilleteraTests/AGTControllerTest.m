@@ -11,6 +11,7 @@
 #import "AGTWalletTableViewController.h"
 #import "AGTWallet.h"
 #import "AGTMoney.h"
+#import "AGTBroker.h"
 
 @interface AGTControllerTest : XCTestCase
 @property (strong,nonatomic) AGTSimpleViewController *simpleVC;
@@ -19,6 +20,7 @@
 
 @property (strong,nonatomic) AGTWalletTableViewController *walletVC;
 @property (strong,nonatomic) AGTWallet *wallet;
+@property (strong,nonatomic) AGTBroker *broker;
 
 
 @end
@@ -34,10 +36,14 @@
     self.label = [[UILabel alloc]initWithFrame:CGRectZero];
     self.simpleVC.displayLabel = self.label;
     
+    self.broker = [AGTBroker new];
+    
+    //valores de wallet
     self.wallet = [[AGTWallet alloc]initWithAmount:1 currency:@"USD"];
     [self.wallet plus:[AGTMoney euroWithAmount:1]];
     [self.wallet plus:[AGTMoney euroWithAmount:4]];
     [self.wallet plus:[[AGTMoney alloc] initWithAmount:54 currency:@"JPY"]];
+    
     self.walletVC = [[AGTWalletTableViewController alloc]initWithModel:self.wallet];
 }
 
@@ -121,6 +127,15 @@
     XCTAssertEqual(sum, 5, @"deben sumar 5 los euros");
 
     
+}
+
+-(void)testsumWallet{
+    //devuelve la suma de todas las monedas en una divisa, solo lo haremos para euros
+    
+    [self.broker addRate:2 fromCurrency:@"USD" toCurrency:@"EUR"];
+    [self.broker addRate:3 fromCurrency:@"JPY" toCurrency:@"EUR"];
+    NSInteger eur = [self.wallet sumWalletInCurrency:@"EUR" andBroker:self.broker];
+    XCTAssertEqual(eur, 169, "Las suma de divisas debe ser 169");
 }
 
 

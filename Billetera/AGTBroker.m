@@ -20,7 +20,7 @@
 
 -(id <AGTMoney>) reduced:(id<AGTMoney>)money toCurrency:(NSString *)currency {
     
-    return [money reduceToCurrency: currency withBorker: self];
+    return [money reduceToCurrency: currency withBroker: self];
 }
 
 -(void) addRate:(NSInteger)rate fromCurrency:(NSString *)fromCurrency toCurrency:(NSString *)toCurrency{

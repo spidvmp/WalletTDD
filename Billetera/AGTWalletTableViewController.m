@@ -8,10 +8,12 @@
 
 #import "AGTWalletTableViewController.h"
 #import "AGTWallet.h"
+#import "AGTBroker.h"
 
 @interface AGTWalletTableViewController ()
 
 @property(strong,nonatomic) AGTWallet *model;
+@property(strong,nonatomic) AGTBroker *broker;
 @end
 
 @implementation AGTWalletTableViewController
@@ -19,6 +21,7 @@
 -(id)initWithModel:(AGTWallet *) model{
     if (self = [super initWithStyle:UITableViewStylePlain]) {
         _model = model;
+        _broker = [[AGTBroker alloc] init];
     }
     return  self;
 }
@@ -31,6 +34,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    //pongo las relaciones que puse en el appdelegate
+    [self.broker addRate:2 fromCurrency:@"USD" toCurrency:@"EUR"];
+    [self.broker addRate:3 fromCurrency:@"JPY" toCurrency:@"EUR"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,7 +78,7 @@
     
     NSArray *monedas = [self.model currencies];
     if ( indexPath.section >= [monedas count])
-        cell.textLabel.text = @"totalesssss";
+        cell.textLabel.text = [NSString stringWithFormat:@"totales: %ld EUR", [self.model sumWalletInCurrency:@"EUR" andBroker:self.broker]];
     else {
         //compruebo si es la ultima row para poner el total de la divisa o no
         //este if no lo he hecho nunca, petar no peta, pero se puede/debe hacer esto?

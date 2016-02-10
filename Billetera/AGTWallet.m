@@ -8,6 +8,7 @@
 
 #import "AGTWallet.h"
 
+
 @interface AGTWallet ()
 @property (strong,nonatomic) NSMutableArray *moneys;
 
@@ -43,11 +44,11 @@
     return self;
 }
 
--(id <AGTMoney>) reduceToCurrency:(NSString *)currency withBorker:(AGTBroker *)broker {
+-(id <AGTMoney>) reduceToCurrency:(NSString *)currency withBroker:(AGTBroker *)broker {
     
     AGTMoney *result = [[AGTMoney alloc]initWithAmount:0 currency:currency];
     for (AGTMoney *each in self.moneys) {
-        result = [result plus: [each reduceToCurrency:currency withBorker:broker]];
+        result = [result plus: [each reduceToCurrency:currency withBroker:broker]];
     }
     
     return result;
@@ -92,6 +93,13 @@
         sum+=[each.amount intValue];
     }
     return sum;
+}
+-(NSInteger) sumWalletInCurrency:(NSString *)currency andBroker:(AGTBroker *) broker{
+    //suma todos los valores traducidos a la divisa, solo lo haremos para euros
+
+    AGTMoney *suma = [self reduceToCurrency:currency withBroker:broker];
+    
+    return [suma.amount integerValue];
 }
 
 //esto es para la prueba del singleton
