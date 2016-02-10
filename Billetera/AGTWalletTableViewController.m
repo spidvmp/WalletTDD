@@ -110,25 +110,37 @@
     }
 }
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        //hay que obtenrr el elemento del array a eleiminar, hay que recalcularlo como todo
+        //busco la divisa, busco la cantidad y elimino un registro que conincida la divisa y la cantidad
+        NSString *divisa = [[self.model currencies] objectAtIndex:indexPath.section];
+        NSInteger amount = [[[[self.model billsFromCurrency:divisa] objectAtIndex:indexPath.row] amount] integerValue];
+        NSLog(@"elimino %@ %ld", divisa, amount);
+        [self.model deleteMoneyWithCurrency:divisa andAmount:amount];
+        
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        //[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        
+    }
+    [tableView reloadData];
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.

@@ -22,4 +22,5 @@
 -(NSArray *) billsFromCurrency:(NSString*)currency;
 -(NSInteger) sumCurrency:(NSString*) currency;
 -(NSInteger) sumWalletInCurrency:(NSString *) currency andBroker:(AGTBroker *) borker;
+-(void)deleteMoneyWithCurrency:(NSString*) currency andAmount:(NSInteger ) amount;
 @end

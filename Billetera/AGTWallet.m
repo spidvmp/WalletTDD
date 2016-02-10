@@ -101,6 +101,17 @@
     
     return [suma.amount integerValue];
 }
+-(void)deleteMoneyWithCurrency:(NSString *)currency andAmount:(NSInteger)amount{
+    //hago la busqueda directamente sobre el self.moneys, ya que he de quitarlo de ahi. No puedo haceruna bisqueda xq el resultado es un array diferente, asi que me lo recorro a pelo. Algo muy efectivo
+    for (int i=0; i< self.moneys.count ;i++){
+        AGTMoney *each = [self.moneys objectAtIndex:i];
+        if ( [each.currency isEqual: currency] && ( [each.amount intValue] == amount))
+        {
+            [self.moneys removeObjectAtIndex:i];
+            i = self.moneys.count + 1;
+        }
+    }
+}
 
 //esto es para la prueba del singleton
 -(void)subscribeToMemoryWarning:(NSNotificationCenter *)nc {

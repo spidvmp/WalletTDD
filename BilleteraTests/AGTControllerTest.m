@@ -138,5 +138,13 @@
     XCTAssertEqual(eur, 169, "Las suma de divisas debe ser 169");
 }
 
+-(void)testdeleteMoney{
+    
+    NSUInteger hay = self.wallet.count;
+    [self.wallet deleteMoneyWithCurrency:@"EUR" andAmount:1];
+
+    XCTAssertEqual(self.wallet.count, hay - 1, @"He borrado el otro bollete");
+}
+
 
 @end
