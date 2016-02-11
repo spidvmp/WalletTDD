@@ -162,10 +162,28 @@
     //grabo lo que me han pasado
     AGTMoney *a = [[AGTMoney alloc] initWithAmount:amount currency:currency];
     [self.model plus:a];
+    
+    //inserto la relacion
+    if ( [self haveToInsert:currency] ){
+        [self.broker addRate:rate fromCurrency:currency toCurrency:@"EUR"];
+    }
+    
+    
     [self.tableView reloadData];
     
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     
+    
+}
+
+-(BOOL) haveToInsert:(NSString *) c{
+    if ( [ c isEqualToString:@"EUR"])
+        return NO;
+    else if ( [self.broker.rates objectForKey:[self.broker keyFromCurrency:c toCurrency:@"EUR"]] )
+        //existe la relacion
+        return NO;
+    else
+        return YES;
     
 }
 

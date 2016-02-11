@@ -41,7 +41,7 @@
     
     self.moneda.placeholder = @"identificacion moneda";
     self.cantidad.placeholder = @"un numero entero";
-    self.relacion.placeholder = @"la misma que ya hubiera";
+    self.relacion.placeholder = @"Relacion con EUR";
     [self.view addSubview:self.moneda];
     [self.view addSubview:self.cantidad];
     [self.view addSubview:self.relacion];
