@@ -159,6 +159,11 @@
 #pragma mark - Protocolo dismiss
 -(void)dismissWithCurrency:(NSString *)currency amount:(NSInteger)amount andRate:(NSInteger)rate {
     
+    //grabo lo que me han pasado
+    AGTMoney *a = [[AGTMoney alloc] initWithAmount:amount currency:currency];
+    [self.model plus:a];
+    [self.tableView reloadData];
+    
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     
     
